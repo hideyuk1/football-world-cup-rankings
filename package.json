@@ -26,5 +26,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hideyuk1/football-world-cup-rankings"
-  }
+  },
+  "homepage": "https://react-kanto-pokedex.vercel.app/"
 }
