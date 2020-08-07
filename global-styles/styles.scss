@@ -1,0 +1,14 @@
+@use 'global-styles/colors';
+
+body {
+    background-color: colors.$white;
+    background-color: #f0f0f0;
+    
+    color: colors.$black;
+    margin: 0;
+    
+}
+
+div {
+    box-sizing: border-box;
+}
