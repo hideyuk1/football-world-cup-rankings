@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to world-cup-index</h1>
+<h1 align="center">Welcome to football-world-up-rankings</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/hideyuk1/football-world-cup-rankings#readme" target="_blank">
