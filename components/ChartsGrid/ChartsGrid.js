@@ -244,21 +244,6 @@ const ChartsGrid = ({ charts, chartHeight = 600, onTransitionStateChange = () =>
 
     const ref = useRef(null);
 
-    // useEffect(() => {
-    //     const current = ref.current;
-    //     const observer = new IntersectionObserver(
-    //         (entries) => {
-    //             entries.forEach((entry) => {
-    //                 // setIsVisible(entry.isIntersecting);
-    //                 console.log('intersecting', entry);
-    //             });
-    //         },
-    //         { root: null, rootMargin: '0px', threshold: 0 },
-    //     );
-    //     observer.observe(current);
-    //     return () => observer.unobserve(current);
-    // }, [ref]);
-
     // onStateChange
     useEffect(() => {
         onTransitionStateChange(chartsTransitionState.join());
