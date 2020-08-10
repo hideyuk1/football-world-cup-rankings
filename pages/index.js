@@ -2,9 +2,11 @@ import * as ByPlayer from 'database/views/by-player';
 import * as ByTeam from 'database/views/by-team';
 import Head from 'next/head';
 import { useMemo, useState } from 'react';
-import ChartsGrid from '../components/ChartsGrid/ChartsGrid';
-import Header from '../components/Header/Header';
-import SwipeableContainer from '../components/SwipeableContainer/SwipeableContainer';
+import ChartsGrid from 'components/ChartsGrid/ChartsGrid';
+import Header from 'components/Header/Header';
+import SwipeableContainer from 'components/SwipeableContainer/SwipeableContainer';
+import Disclaimer from 'components/Disclaimer/Disclaimer';
+
 import styles from './index.module.scss';
 
 export async function getStaticProps() {
@@ -20,6 +22,7 @@ export async function getStaticProps() {
             },
             byTeam: {
                 allTimeTopGoalScorers: await ByTeam.allTimeTopGoalScorers.limit(10),
+                allTimeMatchesWon: await ByTeam.allTimeMatchesWon.limit(10),
             },
         },
     };
@@ -28,7 +31,7 @@ export async function getStaticProps() {
 const Home = ({ byPlayer, byTeam }) => {
     const byPlayerCharts = useMemo(
         () => [
-            { data: byPlayer.allTimeTopGoalScorers, title: 'All time top goalscorers' },
+            { data: byPlayer.allTimeTopGoalScorers, title: 'All-time top goalscorers' },
             { data: byPlayer.mostAppearances, title: 'Most appearances' },
             { data: byPlayer.mostAppearancesAsCaptain, title: 'Most appearances as captain' },
             {
@@ -41,7 +44,10 @@ const Home = ({ byPlayer, byTeam }) => {
         [],
     );
     const byTeamCharts = useMemo(
-        () => [{ data: byTeam.allTimeTopGoalScorers, title: 'All time top goalscorers' }],
+        () => [
+            { data: byTeam.allTimeTopGoalScorers, title: 'All-time top goalscorers' },
+            { data: byTeam.allTimeMatchesWon, title: 'All-time matches won' },
+        ],
         [],
     );
 
@@ -62,7 +68,7 @@ const Home = ({ byPlayer, byTeam }) => {
             <Header />
             <main className={styles.main}>
                 <SwipeableContainer
-                    labels={['Players', 'Teams']}
+                    labels={['Players', 'Teams', 'Disclaimer']}
                     resizeTrigger={slideResizeTrigger}
                 >
                     <ChartsGrid
@@ -75,6 +81,7 @@ const Home = ({ byPlayer, byTeam }) => {
                         chartHeight={chartHeight}
                         onTransitionStateChange={triggerResize}
                     />
+                    <Disclaimer />
                 </SwipeableContainer>
             </main>
         </>
