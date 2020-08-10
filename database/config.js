@@ -1,7 +1,7 @@
 const dbConfig = {
     client: 'sqlite3',
     connection: {
-        filename: 'database/worldcup.db',
+        filename: 'database/db.db',
     },
 };
 
