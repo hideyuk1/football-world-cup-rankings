@@ -11,6 +11,8 @@
     padding: .5rem;
     position: relative;
     cursor: pointer;
+    width: 100px;
+    text-align: center;
 }
 
 .underlineSelected {
@@ -40,7 +42,7 @@
     width:100%;
     flex-shrink:0;
     overflow:auto;
-    min-height: 90vh;
+    min-height: 85vh;
     &::-webkit-scrollbar {
         display: none;
     }
