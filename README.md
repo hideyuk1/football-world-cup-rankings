@@ -20,7 +20,7 @@ Website showcasing some football worldcup rankings using:
 - CSS transitions and Web Animations API for animations
 - d3.js
 
-### [Homepage](https://react-kanto-pokedex.vercel.app/)
+### [Homepage](https://football-world-cup-rankings.vercel.app/)
 
 ## Install
 
