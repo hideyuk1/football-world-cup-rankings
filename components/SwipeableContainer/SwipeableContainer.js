@@ -74,7 +74,7 @@ const SwipeableContainer = ({ children, labels, resizeTrigger }) => {
     const underlineTransformX = useMemo(() => {
         const newTransformX = -(translateX + dx);
         const minValue = 0;
-        const maxValue = (children.length + 1) * 100;
+        const maxValue = (children.length - 1) * 100;
         if (newTransformX < minValue) return 0;
         if (newTransformX > maxValue) return maxValue;
         return newTransformX;
