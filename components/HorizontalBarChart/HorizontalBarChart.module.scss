@@ -30,7 +30,7 @@
 
 
 .label {
-    width: 30%;
+    width: 33%;
     position: relative;
     font-family: Inter;
     opacity: 1;
@@ -42,7 +42,7 @@
 }
 
 .barContainer {
-    width: 70%;
+    width: 67%;
     position: relative;
 }
 
@@ -58,15 +58,4 @@
     padding-right: 0.5rem;
     font-size: 1.25rem;
     box-sizing: border-box;
-    // @keyframes scaleOnLoad {
-    //     from {
-    //         opacity: 0;
-    //         transform: scaleX(0.5);
-    //     }
-    //     to {
-    //         opacity: 1;
-    //         transform: scaleX(1);
-    //     }
-    // }
-    // animation: scaleOnLoad 600ms;
 }

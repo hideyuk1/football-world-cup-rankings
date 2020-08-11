@@ -10,7 +10,7 @@
     align-items: center;
 
     & > * {
-        margin: .5rem;
+        margin: .5rem 1rem;
     }
 }
 
@@ -53,11 +53,16 @@
 
     .titleText {
         margin-left: auto;
+        font-size: 1.25rem;
+        @media screen and (min-width:360px ) {
+            font-size: 1.5rem;
+        }
     }
 
 
     .chevron {
         margin-left: auto;
+        padding-left: .5rem;
         font-size: 2rem;
         transition: transform 200ms;
         flex-shrink: 0;
@@ -85,9 +90,7 @@
     width: 100%;
     left: 0;
     top: 99.5%;
-    padding: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0 1.5rem;
     box-shadow: 0 0 40px 0 rgba(0,0,0,.1);
 
     background-color: white;
