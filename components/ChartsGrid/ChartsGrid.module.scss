@@ -1,7 +1,7 @@
 .chartsGrid {
     margin: -.5rem auto;
     margin-top: 1rem;
-    padding: 1rem 0;
+    padding: .5rem;
     max-width: 1024px;
     display: flex;
     justify-content: center;
@@ -10,13 +10,13 @@
     align-items: center;
 
     & > * {
-        margin: .5rem 1rem;
+        margin: .5rem;
     }
 }
 
 .cell {
     width: 100%;
-    max-width: 490px;
+    max-width: 480px;
     display: flex;
     flex-direction: column;
     position: relative;
